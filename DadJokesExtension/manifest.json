@@ -2,5 +2,16 @@
     "name": "Dad Jokes",
     "description": "The most uncool dad jokes",
     "version": "0.0.1",
-    "manifest_version": 3
+    "manifest_version": 3,
+
+    "permissions": ["activeTab"],
+
+    "icons":{
+        "128": "logo.png"
+    },
+
+    "action":{
+        "default_icon": "logo.png",
+        "default_popup": "popup.html"
+    }
 }
