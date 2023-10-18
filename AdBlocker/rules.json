@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "action": {"type": "block"},
+        "priority": 1,
+        "condition": {
+            "urlFilter": "*://*doubleclick.*"
+        }
+    },
+    {
+        "id": 2,
+        "action": {"type": "block"},
+        "priority": 1,
+        "condition": {
+            "urlFilter": "*://*googleads.*"
+        }
+    },
+    {
+        "id": 3,
+        "action": {"type": "block"},
+        "priority": 1,
+        "condition": {
+            "urlFilter": "*://youtube.com/api/stats/qoe*"
+        }
+    },
+    {
+        "id": 4,
+        "action": {"type": "block"},
+        "priority": 1,
+        "condition": {
+            "urlFilter": "*://www.google.com/pagead*"
+        }
+    }
+
+]
