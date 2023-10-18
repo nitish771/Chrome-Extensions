@@ -2,7 +2,9 @@
     "name": "Ad Blocker",
     "version": "1.0.0",
     "manifest_version": 3,
-
+    "icons": {
+        "128": "green-128.png"
+    },
     "permissions": [
         "declarativeNetRequest"
     ],
