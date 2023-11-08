@@ -1,0 +1,50 @@
+{
+   "manifest_version": 3,
+   "name": "Utils",
+   "description": "Zoom in on a specific part of the website, like you would with a touchpad gesture!",
+   "permissions": [ "declarativeNetRequest","tabs", "contextMenus", "storage", "notifications" ],
+   "version": "2.4",
+
+   "action": {
+      "default_popup": "options/options.html",
+      "default_icon": "icons/logo.png"
+
+   },
+
+   "background": {
+      "service_worker": "background.js"
+   },
+
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content/prep.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "content/handlers.js", "content/configure.js", "content/iframe.js", "content/scale.js", "content/absolute.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+
+   "icons": {
+      "128": "icons/logo.png",
+      "16": "icons/logo.png",
+      "48": "icons/logo.png"
+   },
+
+   "declarative_net_request":{
+        "rule_resources": [{
+            "id" : "ruleset_1",
+            "enabled": true,
+            "path": "rules.json"
+        }]
+    },
+
+   "options_ui": {
+      "open_in_tab": false,
+      "page": "options/options.html"
+   },
+
+   "update_url": "https://clients2.google.com/service/update2/crx"
+}
